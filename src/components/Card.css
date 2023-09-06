@@ -1,0 +1,24 @@
+.card {
+  margin: 0 auto;
+  width: 100%;
+  background-color: hsl(0, 0%, 100%);
+}
+
+/*DESKTOP LAYOUT*/
+@media screen and (min-width: 376px){
+  .card{
+    border-radius: 0px 0px 30px 30px;
+    
+  }
+}
+
+@media screen and (min-width: 954px){
+  .card{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border-radius: 30px;
+  }
+}
+

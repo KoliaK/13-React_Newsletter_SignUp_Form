@@ -1,0 +1,67 @@
+.success_container {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.icon_success {
+  margin: 7rem 0rem 2.5rem;
+}
+
+.success_container .title {
+  line-height: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.email_span{
+  font-weight: 700;
+}
+
+.success_form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.success_form button{
+  margin-top: 14.7rem;
+  padding: 1.2rem 6.2rem;
+}
+
+/*DESKTOP LAYOUT*/
+@media screen and (min-width: 954px){
+  .success_container {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+  
+  .icon_success {
+    margin: 0rem 0rem 2rem;
+  }
+  
+  .success_container .title {
+    line-height: 4rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .success_form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .success_form button{
+    margin-top: 1rem;
+    padding: 1.2rem 7.8rem;
+  }
+}

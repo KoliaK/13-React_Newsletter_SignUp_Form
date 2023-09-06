@@ -1,0 +1,145 @@
+/*IMAGE*/
+
+.img_mobile {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.img_desktop{
+  display: none;
+}
+
+/*TEXT*/
+.text_box, .subscribe_title, .subscribe_text{
+  color: hsl(234, 29%, 20%);
+}
+
+.text_box {
+  padding: 2.5rem 1.5rem;
+}
+
+.title{
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.text{
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+/*LIST*/
+.list_container {
+  margin-bottom: 1.5rem;
+}
+
+.list_item {
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.list_icon {
+  margin-bottom: 2rem;
+}
+
+.list_text {
+  margin-left: 1rem;
+  line-height: 1.5rem;
+}
+
+/*INPUT*/
+.subscribe_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.email_label {
+  color: hsl(234, 29%, 20%);
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+#usermail {
+  padding: 1.1rem;
+  border: 1px solid hsl(240, 4%, 78%);
+  border-radius: 10px;
+  color: hsl(231, 7%, 60%);
+  margin-bottom: 1.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+}
+/*BUTTON*/
+button {
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  padding: 1.1rem;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:active{
+  background-image: linear-gradient(to right, hsl(355, 100%, 67%), hsl(6, 100%, 66%));
+  box-shadow: 0px 10px 30px 5px hsla(6, 100%, 66%, 0.466);
+}
+
+/*DESKTOP LAYOUT*/
+@media screen and (min-width: 954px){
+  .img_container .img_mobile {
+    display: none;
+  }
+
+  .img_container .img_desktop{
+    display: flex;
+    margin-left: 4rem;
+  }
+
+  /*TEXT*/
+  .text_box {
+    padding: 0;
+    margin-left: 3rem;
+  }
+  
+  .title{
+    
+    font-size: 3.4rem;
+  }
+  
+  .text{
+    width: 370px;
+  }
+  
+  /*LIST*/
+  .list_container {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  
+  .list_item {  
+    min-height: 2.3rem;
+  }
+  
+  .list_icon {
+    margin-bottom: 0rem;
+  }
+  
+  .list_text {
+    margin-left: 1rem;
+  }
+  
+  /*BUTTON*/
+  button {
+    padding: 1.1rem 4.5rem;
+  }
+}
