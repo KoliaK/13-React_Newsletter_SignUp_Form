@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from './Card';
 import ImgMobile from '../assets/illustration-sign-up-mobile.svg';
 import ImgDesktop from '../assets/illustration-sign-up-desktop.svg';
 import ListIcon from '../assets/icon-list.svg'
 import './Subscribe.css';
 
-const Subscribe = () => {
+const Subscribe = ({userEmail, setUserEmail, setSuccessPage}) => {
+  const [isValid, setIsValid] = useState(true);
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const handleSubmit = (event) => {
+    
+    if(emailRegex.test(userEmail)) {
+      setSuccessPage(true)
+      return setUserEmail(userEmail);
+    } else if (!userEmail) {
+      return;
+    }
+  };
+
+  const handleEmailChange = (event) => {
+    setUserEmail(event.target.value);
+    setIsValid(emailRegex.test(event.target.value));
+  };
+
   return (
     <Card>
       <div className="img_container">
@@ -35,11 +53,29 @@ const Subscribe = () => {
         </ul>
 
         <form className="subscribe_form">
-          <label className="email_label" htmlFor="usermail">Email address</label>
+          <div className="label_container">
+            <label 
+              className="email_label" 
+              htmlFor="user_email_valid">Email address
+            </label>
+            <label 
+              className={!isValid ? "error_label_active" : "error_label_inactive"}
+              htmlFor="user_email_invalid">Valid email required
+            </label>
+          </div>
 
-          <input id="usermail" type="email" placeholder="email@company.com" />
+          <input
+          className={!isValid ? "user_email_invalid" : "user_email_valid"}
+          type="email" 
+          placeholder="email@company.com" 
+          value={userEmail} 
+          onChange={handleEmailChange}
+          />
 
-          <button>Subscribe to monthly newsletter</button>
+          <button 
+          onClick={handleSubmit}>
+            Subscribe to monthly newsletter
+          </button>
         </form>
       </div>
     </Card>

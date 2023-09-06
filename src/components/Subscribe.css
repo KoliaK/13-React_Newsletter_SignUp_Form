@@ -58,6 +58,11 @@
   flex-direction: column;
 }
 
+.label_container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .email_label {
   color: hsl(234, 29%, 20%);
   margin-bottom: 0.5rem;
@@ -66,16 +71,36 @@
   letter-spacing: 0.5px;
 }
 
-#usermail {
+.error_label_inactive {
+  display: none;
+}
+
+.error_label_active {
+  color: hsl(6, 100%, 66%);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.user_email_valid, .user_email_invalid{
   padding: 1.1rem;
-  border: 1px solid hsl(240, 4%, 78%);
   border-radius: 10px;
-  color: hsl(231, 7%, 60%);
   margin-bottom: 1.5rem;
   font-family: inherit;
   font-size: 1rem;
   cursor: pointer;
+  outline: none;
+  border: 1px solid hsl(240, 4%, 78%);
+  color: hsl(231, 7%, 60%);
 }
+
+.user_email_invalid:invalid{
+  background-color: hsla(6, 100%, 66%, 0.253);
+  color: hsl(6, 100%, 66%);
+  border: 1px solid hsl(6, 100%, 66%);
+  
+}
+
 /*BUTTON*/
 button {
   background-color: hsl(234, 29%, 20%);
@@ -87,6 +112,7 @@ button {
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+  outline: none;
 }
 
 button:active{
