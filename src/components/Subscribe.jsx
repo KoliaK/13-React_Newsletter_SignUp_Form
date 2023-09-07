@@ -9,16 +9,6 @@ const Subscribe = ({userEmail, setUserEmail, setSuccessPage}) => {
   const [isValid, setIsValid] = useState(true);
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  /*const handleSubmit = (event) => {
-    
-    if(emailRegex.test(userEmail)) {
-      setSuccessPage(true)
-      return setUserEmail(userEmail);
-    } else if (!userEmail) {
-      return;
-    }
-  };*/
-
   const handleSubmit = () => {
     if(emailRegex.test(userEmail)) {
       setSuccessPage(true)
